@@ -5,25 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sector3 Racing</title>
 
-  <!-- Meta -->
   <meta name="description" content="Sector3 Racing – performance-driven motorsport and sim racing team." />
   <meta name="theme-color" content="#1b0040" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <!-- Adobe Fonts (Typekit) -->
+  <link rel="stylesheet" href="https://use.typekit.net/dis6mlt.css" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="https://use.typekit.net/dis6mlt.css">
+  <!-- Favicons (optional but recommended) -->
+  <link rel="icon" href="favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">Sector3 Racing</div>
-      <nav class="nav">
+      <a class="brand" href="/" aria-label="Sector3 Racing homepage">
+        <!-- Swap to .png if needed -->
+        <img class="brand-logo" src="assets/logos/sector3-mark.svg" alt="Sector3 Racing logo" />
+        <span class="brand-name">Sector3 Racing</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
         <a href="#team">Team</a>
         <a href="#racing">Racing</a>
         <a href="#partners">Partners</a>
@@ -40,6 +47,11 @@
         <p class="hero-sub">
           A performance-focused racing organization operating at the intersection of engineering, data, and competition.
         </p>
+
+        <div class="hero-cta">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn btn-ghost" href="#partners">Partners</a>
+        </div>
       </div>
     </section>
 
@@ -47,7 +59,7 @@
     <section id="team" class="section">
       <div class="container">
         <h2>Team</h2>
-        <p>
+        <p class="lede">
           Sector3 Racing is built around methodical preparation, technical execution, and continuous improvement.
           We operate with a motorsport-first mindset across both real-world and simulated competition.
         </p>
@@ -78,18 +90,21 @@
     <section id="racing" class="section alt">
       <div class="container">
         <h2>Racing Programs</h2>
+
         <div class="grid three">
           <div class="card">
             <h3>Sim Racing</h3>
             <p>Endurance and sprint competition with an emphasis on consistency and racecraft.</p>
           </div>
+
           <div class="card">
             <h3>Customer Motorsport</h3>
-            <p>Planned participation in accessible entry-level categories.</p>
+            <p>Planned participation in accessible entry-level categories with a disciplined progression.</p>
           </div>
+
           <div class="card">
             <h3>Development</h3>
-            <p>Driver and systems development through structured testing and review.</p>
+            <p>Driver and systems development through structured testing, review, and iteration.</p>
           </div>
         </div>
       </div>
@@ -103,12 +118,33 @@
           Sector3 Racing collaborates with technical partners and supporters aligned with performance and integrity.
         </p>
 
-        <div class="grid four partners">
-          <div class="partner">Partner Name</div>
-          <div class="partner">Partner Name</div>
-          <div class="partner">Partner Name</div>
-          <div class="partner">Partner Name</div>
+        <!-- Option A: Logo tiles -->
+        <div class="partners-grid" role="list">
+          <a class="partner-tile" role="listitem" href="#" aria-label="Partner name">
+            <img src="assets/logos/partners/partner-1.svg" alt="Partner 1 logo" />
+          </a>
+
+          <a class="partner-tile" role="listitem" href="#" aria-label="Partner name">
+            <img src="assets/logos/partners/partner-2.svg" alt="Partner 2 logo" />
+          </a>
+
+          <a class="partner-tile" role="listitem" href="#" aria-label="Partner name">
+            <img src="assets/logos/partners/partner-3.svg" alt="Partner 3 logo" />
+          </a>
+
+          <a class="partner-tile" role="listitem" href="#" aria-label="Partner name">
+            <img src="assets/logos/partners/partner-4.svg" alt="Partner 4 logo" />
+          </a>
         </div>
+
+        <!-- Option B: If you do not have logos yet, use text tiles instead
+        <div class="partners-grid" role="list">
+          <div class="partner-text" role="listitem">Partner Name</div>
+          <div class="partner-text" role="listitem">Partner Name</div>
+          <div class="partner-text" role="listitem">Partner Name</div>
+          <div class="partner-text" role="listitem">Partner Name</div>
+        </div>
+        -->
       </div>
     </section>
 
@@ -116,20 +152,25 @@
     <section id="contact" class="section alt">
       <div class="container">
         <h2>Contact</h2>
-        <p>
-          Inquiries, partnerships, and media requests:
+        <p class="lede">
+          Inquiries, partnerships, and media requests.
         </p>
-        <p class="contact">
-          <a href="mailto:info@sector3racing.com">info@sector3racing.com</a>
-        </p>
+
+        <div class="contact-block">
+          <a class="contact-email" href="mailto:info@sector3racing.com">info@sector3racing.com</a>
+          <p class="muted small">Replace with your preferred inbox once configured.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>© <span id="year"></span> Sector3 Racing</span>
-      <span class="muted">All rights reserved</span>
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/logos/sector3-mark.svg" alt="Sector3 Racing logo" />
+        <span>© <span id="year"></span> Sector3 Racing</span>
+      </div>
+      <span class="muted small">All rights reserved</span>
     </div>
   </footer>
 
@@ -138,4 +179,3 @@
   </script>
 </body>
 </html>
-
