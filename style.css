@@ -451,33 +451,119 @@ p {
 }
 
 /* =========================================================
-   Footer
+   Footer (global, stacked)
 ========================================================= */
 
 .site-footer {
   border-top: 1px solid var(--border);
-  padding: 1.6rem 0;
+  padding: 3.25rem 0 1.75rem;
   font-size: 0.92rem;
 }
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 2.25rem;
 }
 
-.footer-brand {
+/* Top logo row (Sector3 + future title partner) */
+.footer-top-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Make the top logo(s) meaningfully larger */
+.footer-top-logo {
+  width: 96px;
+  height: 96px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
   display: inline-flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  text-decoration: none;
+  background-color: transparent;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
-.footer-logo {
-  width: 26px;
-  height: 26px;
+.footer-top-logo:hover {
+  background-color: var(--hover-bg);
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+
+.footer-top-logo img {
+  width: 54px;
+  height: 54px;
   display: block;
+  opacity: 0.9;
+  filter: grayscale(1) brightness(1.2);
+  transition: opacity 160ms ease, filter 160ms ease, transform 160ms ease;
+}
+
+.footer-top-logo:hover img,
+.footer-top-logo:focus-visible img {
+  opacity: 1;
+  filter: grayscale(1) brightness(2);
+  transform: scale(1.03);
+}
+
+/* Partners strip (no text) */
+.footer-partners {
+  width: 100%;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem 2.25rem;
+  align-items: center;
+  justify-items: center;
+  padding: 0 0.5rem;
+}
+
+.footer-partner {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 0.25rem;
+  border-radius: var(--radius-sm);
+}
+
+.footer-partner img {
+  max-width: 220px;
+  max-height: 54px;
+  width: auto;
+  height: auto;
+
+  opacity: 0.7;
+  filter: grayscale(1) brightness(1.15);
+  transform: scale(1);
+
+  transition: opacity 160ms ease, filter 160ms ease, transform 160ms ease;
+}
+
+.footer-partner:hover img,
+.footer-partner:focus-visible img {
+  opacity: 1;
+  filter: grayscale(1) brightness(2);
+  transform: scale(1.03);
+}
+
+/* Legal row is always a full-width block BELOW partners */
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.footer-legal {
+  color: var(--muted);
+  text-align: center;
 }
 
 /* =========================================================
