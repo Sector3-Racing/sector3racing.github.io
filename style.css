@@ -11,6 +11,10 @@
   --font-display: "neue-haas-grotesk-display", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
+/* =========================================================
+   Base
+========================================================= */
+
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -31,7 +35,58 @@ body {
   padding: 0 2rem;
 }
 
-/* Header */
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.7rem;
+}
+
+p {
+  max-width: 760px;
+  margin: 0 0 1rem 0;
+}
+
+.lede {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.muted { color: var(--muted); }
+
+.small { font-size: 0.9rem; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.05rem;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-ghost { background: transparent; }
+
+/* Sections */
+.section { padding: 4.75rem 0; }
+
+.section.alt { background-color: var(--bg-alt); }
+
+/* =========================================================
+   Header / Navigation
+========================================================= */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -79,13 +134,15 @@ body {
 
 .nav a:hover { color: var(--text); }
 
-/* Hero */
+/* =========================================================
+   Hero
+========================================================= */
+
 .hero {
   padding: 6.25rem 0 5.25rem;
 }
 
 .hero h1 {
-  font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: 0.2px;
   font-size: clamp(2.4rem, 4.2vw, 3.4rem);
@@ -106,49 +163,11 @@ body {
   flex-wrap: wrap;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.85rem 1.05rem;
-  border: 1px solid var(--border);
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-}
+/* =========================================================
+   Layout Components
+========================================================= */
 
-.btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.btn-ghost {
-  background: transparent;
-}
-
-/* Sections */
-.section { padding: 4.75rem 0; }
-
-.section.alt { background-color: var(--bg-alt); }
-
-h2 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  margin: 0 0 1rem 0;
-  font-size: 1.7rem;
-}
-
-p { max-width: 760px; margin: 0 0 1rem 0; }
-
-.lede {
-  font-size: 1.05rem;
-  color: var(--text);
-}
-
-.muted { color: var(--muted); }
-
-.small { font-size: 0.9rem; }
-
-/* Grids and cards */
+/* Grids */
 .grid {
   display: grid;
   gap: 1.5rem;
@@ -158,6 +177,7 @@ p { max-width: 760px; margin: 0 0 1rem 0; }
 .grid.two { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .grid.three { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
+/* Cards */
 .card {
   background-color: var(--bg);
   border: 1px solid var(--border);
@@ -166,7 +186,6 @@ p { max-width: 760px; margin: 0 0 1rem 0; }
 
 .card h3 {
   margin: 0 0 0.85rem 0;
-  font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: 0.15px;
   font-size: 1.1rem;
@@ -182,50 +201,11 @@ p { max-width: 760px; margin: 0 0 1rem 0; }
 
 .card li { margin: 0.35rem 0; }
 
-/* Contact layout */
-.contact-grid {
-  display: grid;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
+/* =========================================================
+   Partners
+========================================================= */
 
-.contact-card {
-  border: 1px solid var(--border);
-  background-color: var(--bg);
-  padding: 1.6rem;
-}
-
-.contact-title {
-  margin: 0 0 0.85rem 0;
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: 0.15px;
-  font-size: 1.1rem;
-}
-
-/* Social chips */
-.social-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.25rem;
-}
-
-.social-chips a {
-  text-decoration: none;
-  color: var(--text);
-  border: 1px solid var(--border);
-  padding: 0.6rem 0.85rem;
-  font-weight: 500;
-}
-
-.social-chips a:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-/* Partners */
+/* Old tile grid (keep if still used anywhere) */
 .partners-grid {
   display: grid;
   gap: 1.25rem;
@@ -244,13 +224,9 @@ p { max-width: 760px; margin: 0 0 1rem 0; }
   min-height: 92px;
 }
 
-.partner-tile {
-  text-decoration: none;
-}
+.partner-tile { text-decoration: none; }
 
-.partner-tile:hover {
-  border-color: var(--accent);
-}
+.partner-tile:hover { border-color: var(--accent); }
 
 .partner-tile img {
   max-width: 150px;
@@ -267,6 +243,7 @@ p { max-width: 760px; margin: 0 0 1rem 0; }
   font-weight: 400;
 }
 
+/* New logo strip */
 .partner-strip {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -293,9 +270,9 @@ p { max-width: 760px; margin: 0 0 1rem 0; }
   /* Default muted gray look */
   opacity: 0.7;
   filter: grayscale(1) brightness(1.15);
+  transform: scale(1);
 
   transition: opacity 160ms ease, filter 160ms ease, transform 160ms ease;
-  transform: scale(1);
 }
 
 .partner-logo:hover img,
@@ -310,8 +287,30 @@ p { max-width: 760px; margin: 0 0 1rem 0; }
   outline-offset: 4px;
 }
 
+/* =========================================================
+   Contact
+========================================================= */
 
-/* Contact */
+.contact-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.contact-card {
+  border: 1px solid var(--border);
+  background-color: var(--bg);
+  padding: 1.6rem;
+}
+
+.contact-title {
+  margin: 0 0 0.85rem 0;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+  font-size: 1.1rem;
+}
+
 .contact-block { margin-top: 1.25rem; }
 
 .contact-email {
@@ -330,7 +329,77 @@ p { max-width: 760px; margin: 0 0 1rem 0; }
   border-color: var(--accent);
 }
 
-/* Footer */
+/* Social icon buttons (Contact section) */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.social-icon {
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--border);
+  background-color: var(--bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.social-icon:hover { border-color: var(--accent); }
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+  display: block;
+
+  /* Default muted look */
+  opacity: 0.72;
+  filter: grayscale(1) brightness(1.15);
+  transform: scale(1);
+
+  transition: opacity 160ms ease, filter 160ms ease, transform 160ms ease;
+}
+
+.social-icon:hover img,
+.social-icon:focus-visible img {
+  opacity: 1;
+  filter: grayscale(1) brightness(2);
+  transform: scale(1.06);
+}
+
+.social-icon:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* Legacy social chips (keep if used anywhere) */
+.social-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.social-chips a {
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.85rem;
+  font-weight: 500;
+}
+
+.social-chips a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* =========================================================
+   Footer
+========================================================= */
+
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 1.6rem 0;
@@ -357,7 +426,10 @@ p { max-width: 760px; margin: 0 0 1rem 0; }
   display: block;
 }
 
-/* Mobile nav handling */
+/* =========================================================
+   Responsive
+========================================================= */
+
 @media (max-width: 640px) {
   .nav { display: none; }
 }
