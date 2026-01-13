@@ -566,6 +566,22 @@ p {
   text-align: center;
 }
 
+
+.footer-partners {
+  outline: 1px solid rgba(255, 255, 255, 0.18);
+  min-height: 80px;
+}
+
+.footer-partner {
+  outline: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-partner img {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+
 /* =========================================================
    Responsive
 ========================================================= */
