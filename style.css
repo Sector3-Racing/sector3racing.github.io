@@ -239,10 +239,10 @@ p {
 .card li { margin: 0.35rem 0; }
 
 /* =========================================================
-   Partners
+   Partners (page section patterns; keep if used)
 ========================================================= */
 
-/* Old tile grid (keep if used anywhere) */
+/* Old tile grid (optional) */
 .partners-grid {
   display: grid;
   gap: 1.25rem;
@@ -290,7 +290,7 @@ p {
   font-weight: 400;
 }
 
-/* New logo strip */
+/* New logo strip (optional, if used on a page) */
 .partner-strip {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -315,17 +315,16 @@ p {
   width: auto;
   height: auto;
 
-  opacity: 0.7;
-  filter: grayscale(1) brightness(1.15);
+  opacity: 0.85;
+  filter: none;
   transform: scale(1);
 
-  transition: opacity 160ms ease, filter 160ms ease, transform 160ms ease;
+  transition: opacity 160ms ease, transform 160ms ease;
 }
 
 .partner-logo:hover img,
 .partner-logo:focus-visible img {
   opacity: 1;
-  filter: grayscale(1) brightness(2);
   transform: scale(1.03);
 }
 
@@ -411,22 +410,19 @@ p {
   width: 20px;
   height: 20px;
   display: block;
-
-  opacity: 0.72;
-  filter: grayscale(1) brightness(1.15);
+  opacity: 0.88;
+  filter: none;
   transform: scale(1);
-
-  transition: opacity 160ms ease, filter 160ms ease, transform 160ms ease;
+  transition: opacity 160ms ease, transform 160ms ease;
 }
 
 .social-icon:hover img,
 .social-icon:focus-visible img {
   opacity: 1;
-  filter: grayscale(1) brightness(2);
   transform: scale(1.06);
 }
 
-/* Legacy social chips (keep if used anywhere) */
+/* Legacy social chips (optional) */
 .social-chips {
   display: flex;
   flex-wrap: wrap;
@@ -451,7 +447,7 @@ p {
 }
 
 /* =========================================================
-   Footer (global, stacked)
+   Footer (global, stacked, visible partner logos)
 ========================================================= */
 
 .site-footer {
@@ -475,7 +471,6 @@ p {
   gap: 1.5rem;
 }
 
-/* Make the top logo(s) meaningfully larger */
 .footer-top-logo {
   width: 96px;
   height: 96px;
@@ -499,19 +494,19 @@ p {
   width: 54px;
   height: 54px;
   display: block;
-  opacity: 0.9;
-  filter: grayscale(1) brightness(1.2);
-  transition: opacity 160ms ease, filter 160ms ease, transform 160ms ease;
+  opacity: 0.92;
+  filter: none;
+  transform: scale(1);
+  transition: opacity 160ms ease, transform 160ms ease;
 }
 
 .footer-top-logo:hover img,
 .footer-top-logo:focus-visible img {
   opacity: 1;
-  filter: grayscale(1) brightness(2);
   transform: scale(1.03);
 }
 
-/* Partners strip (no text) */
+/* Partner logo strip */
 .footer-partners {
   width: 100%;
   max-width: 1440px;
@@ -533,26 +528,26 @@ p {
 }
 
 .footer-partner img {
-  max-width: 220px;
-  max-height: 54px;
+  display: block;
+  max-width: 240px;
+  max-height: 58px;
   width: auto;
   height: auto;
 
-  opacity: 0.7;
-  filter: grayscale(1) brightness(1.15);
+  opacity: 0.9;
+  filter: none;
   transform: scale(1);
 
-  transition: opacity 160ms ease, filter 160ms ease, transform 160ms ease;
+  transition: opacity 160ms ease, transform 160ms ease;
 }
 
 .footer-partner:hover img,
 .footer-partner:focus-visible img {
   opacity: 1;
-  filter: grayscale(1) brightness(2);
   transform: scale(1.03);
 }
 
-/* Legal row is always a full-width block BELOW partners */
+/* Legal row always below partners */
 .footer-bottom {
   width: 100%;
   display: flex;
@@ -566,7 +561,6 @@ p {
   text-align: center;
 }
 
-
 /* =========================================================
    Responsive
 ========================================================= */
@@ -574,4 +568,18 @@ p {
 @media (max-width: 640px) {
   .nav { display: none; }
   .container { padding: 0 1.25rem; }
+
+  .footer-top-logo {
+    width: 86px;
+    height: 86px;
+  }
+
+  .footer-top-logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .footer-partner img {
+    max-height: 54px;
+  }
 }
