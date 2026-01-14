@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1954 1021" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1978.779446,-2414.939656)">
+        <g transform="matrix(0.78313,0,0,0.78313,2363.494679,-298.154279)">
+            <g transform="matrix(4.166667,0,0,4.166667,-146.526204,-206.534141)">
+                <path d="M133.99,968.37C132.38,975.34 125.22,981.04 118.07,981.04L44.07,981.04C36.92,981.04 32.39,975.34 33.99,968.37L51.23,893.7C52.84,886.73 60,881.03 67.15,881.03L141.15,881.03C148.3,881.03 152.83,886.73 151.23,893.7L133.99,968.37Z" style="fill:white;fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(4.166667,0,0,4.166667,-146.526204,-206.534141)">
+                <path d="M313.15,881.04C306,881.04 298.83,886.74 297.23,893.71L279.99,968.38C278.38,975.35 282.92,981.05 290.07,981.05L364.07,981.05C371.22,981.05 378.39,975.35 379.99,968.38L397.23,893.71C398.84,886.74 394.3,881.04 387.15,881.04L313.15,881.04ZM361.7,945.37C360.09,952.34 352.93,958.04 345.78,958.04L318.99,958.04C311.84,958.04 307.31,952.34 308.91,945.37L315.53,916.7C317.14,909.73 324.3,904.03 331.45,904.03L358.24,904.03C365.39,904.03 369.92,909.73 368.32,916.7L361.7,945.37Z" style="fill:white;fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(4.166667,0,0,4.166667,-146.526204,-206.534141)">
+                <path d="M256.99,968.37C255.38,975.34 248.22,981.04 241.07,981.04L167.07,981.04C159.92,981.04 155.39,975.34 156.99,968.37L174.23,893.7C175.84,886.73 183,881.03 190.15,881.03L264.15,881.03C271.3,881.03 275.83,886.73 274.23,893.7L256.99,968.37Z" style="fill:white;fill-rule:nonzero;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,-477.630071,829.091322)">
+            <g transform="matrix(1,0,-0.096289,1,221.397507,0)">
+                <g transform="matrix(416.666667,0,0,416.666667,4390.841564,2299.301027)">
+                </g>
+                <text x="2450.842px" y="2299.301px" style="font-family:'NHaasGroteskDSPro-75Bd', 'Neue Haas Grotesk Display Pro', sans-serif;font-weight:700;font-size:416.667px;fill:white;">S<tspan x="2727.925px " y="2299.301px ">E</tspan>CT<tspan x="3537.925px 3855.425px 4141.258px " y="2299.301px 2299.301px 2299.301px ">OR3</tspan></text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,-71.024754,1132.13299)">
+            <g transform="matrix(1,0,-0.078702,1,180.958915,0)">
+                <g transform="matrix(291.666667,0,0,291.666667,3584.258231,2299.301027)">
+                </g>
+                <text x="2450.842px" y="2299.301px" style="font-family:'NHaasGroteskDSPro-65Md', 'Neue Haas Grotesk Display Pro', sans-serif;font-weight:500;font-size:291.667px;fill:white;">R<tspan x="2656.758px 2851.883px 3065.967px 3155.508px 3370.175px " y="2299.301px 2299.301px 2299.301px 2299.301px 2299.301px ">ACING</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>
