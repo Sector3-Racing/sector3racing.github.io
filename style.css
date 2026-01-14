@@ -379,43 +379,41 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-.footer-top-logo {
-  width: 96px;
-  height: 96px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  display: inline-flex;
-  justify-content: center;
+.footer-partner {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.25rem;
   text-decoration: none;
-  background-color: transparent;
-  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
-.footer-top-logo:hover {
-  background-color: var(--hover-bg);
-  border-color: var(--text);
-  transform: translateY(-1px);
-}
-
-.footer-top-logo img {
-  width: 54px;
-  height: 54px;
+.footer-partner img {
   display: block;
-  opacity: 0.92;
-  filter: none;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  max-height: 58px;
+
+  opacity: 0.9;
   transform: scale(1);
   transition: opacity 160ms ease, transform 160ms ease;
 }
 
-.footer-top-logo:hover img,
-.footer-top-logo:focus-visible img {
+.footer-partner:hover img,
+.footer-partner:focus-visible img {
   opacity: 1;
   transform: scale(1.03);
 }
+
+/* Primary logo (team / title partner) */
+.footer-partner--primary img {
+  max-width: 300px;
+  max-height: 80px;
+}
+
 
 /* Partner logo strip */
 .footer-partners {
