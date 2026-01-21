@@ -107,16 +107,32 @@ p {
 .btn-ghost { background: transparent; }
 
 /* =========================================================
-   Header / Navigation
+   Header (transparent at top, frosted on scroll)
 ========================================================= */
+
+:root {
+  /* Header frost tuning (easy to change later) */
+  --header-bg-top: rgba(11, 11, 16, 0);       /* fully transparent */
+  --header-bg-scrolled: rgba(11, 11, 16, 0.82); /* medium frost */
+  --header-blur: 12px;
+}
 
 .site-header {
   position: sticky;
   top: 0;
-  background-color: rgba(11, 11, 16, 0.86);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
   z-index: 100;
+
+  background-color: var(--header-bg-top);
+  border-bottom: 1px solid transparent;
+  backdrop-filter: none;
+
+  transition: background-color 180ms ease, border-color 180ms ease, backdrop-filter 180ms ease;
+}
+
+.site-header.is-scrolled {
+  background-color: var(--header-bg-scrolled);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(var(--header-blur));
 }
 
 .header-inner {
@@ -124,29 +140,23 @@ p {
   justify-content: space-between;
   align-items: center;
   height: 68px;
+  gap: 1rem;
 }
 
+/* Brand */
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
   text-decoration: none;
-  color: var(--text);
 }
 
-.brand-logo {
-  width: 34px;
-  height: 34px;
+.brand-wordmark {
   display: block;
+  height: 28px;   /* adjust later if you want */
+  width: auto;
 }
 
-.brand-name {
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  font-size: 1.05rem;
-}
-
+/* Desktop nav */
 .nav a {
   color: var(--muted);
   text-decoration: none;
@@ -161,6 +171,138 @@ p {
 .nav a:hover {
   color: var(--text);
   background-color: var(--hover-bg);
+}
+
+/* Mobile: hamburger button (hidden on desktop) */
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  background: transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.nav-toggle:hover {
+  background-color: var(--hover-bg);
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+
+/* Hamburger icon */
+.nav-toggle-lines {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  margin: 0 auto;
+  position: relative;
+  border-radius: 2px;
+}
+
+.nav-toggle-lines::before,
+.nav-toggle-lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+.nav-toggle-lines::before { top: -6px; }
+.nav-toggle-lines::after { top: 6px; }
+
+/* Overlay menu */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(11, 11, 16, 0.86);
+  backdrop-filter: blur(14px);
+}
+
+.nav-overlay-inner {
+  height: 100%;
+  width: 100%;
+  padding: 1.25rem 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+.nav-overlay-brand .brand-wordmark {
+  height: 26px;
+}
+
+.nav-close {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  background: transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  color: var(--text);
+  font-size: 1.6rem;
+  line-height: 1;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.nav-close:hover {
+  background-color: var(--hover-bg);
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+
+.nav-overlay-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+}
+
+.nav-overlay-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  font-size: 1.35rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.nav-overlay-links a:hover {
+  background-color: var(--hover-bg);
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+
+/* Scroll lock when menu open */
+body.nav-open {
+  overflow: hidden;
+}
+
+/* Responsive behavior */
+@media (max-width: 640px) {
+  .nav { display: none; }
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .header-inner { height: 64px; }
+  .brand-wordmark { height: 26px; }
 }
 
 /* =========================================================
