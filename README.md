@@ -115,4 +115,3 @@ All of the above can be implemented incrementally.
 All rights reserved.
 
 This repository and its contents may not be copied, redistributed, or reused without prior written permission.
-http://concspdev:8787/verify-email/jHJ-dlRxA7NSwi4IHUO5NzsEvy8YFHSA6S3W6EUny24
