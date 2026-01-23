@@ -625,6 +625,72 @@ body.nav-open {
 }
 
 /* =========================================================
+   Footer: navigation + information columns
+========================================================= */
+
+.footer-links {
+  width: 100%;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
+}
+
+.footer-col {
+  width: 100%;
+}
+
+.footer-col-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.15px;
+  color: var(--text);
+  margin-bottom: 0.9rem;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin: 0.6rem 0;
+}
+
+.footer-list a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.15rem 0.25rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.footer-list a:hover {
+  color: var(--text);
+  background-color: var(--hover-bg);
+}
+
+/* Visual separator inside the info list (before legal links) */
+.footer-list-sep {
+  margin: 1rem 0;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Mobile stacking */
+@media (max-width: 640px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
+
+/* =========================================================
    Responsive
 ========================================================= */
 

@@ -163,44 +163,71 @@
 <footer class="site-footer">
   <div class="container footer-inner">
 
+    <!-- Primary logo row (team now, title partner later) -->
     <div class="footer-top-logos" aria-label="Team and title partner logos">
-  <!-- Sector3 Racing -->
-  <a class="footer-partner footer-partner--primary"
-     href="/"
-     aria-label="Sector3 Racing home">
-    <img src="/assets/logos/sector3-logo.svg" alt="Sector3 Racing logo" />
-  </a>
+      <a class="footer-partner footer-partner--primary" href="/" aria-label="Sector3 Racing home">
+        <img src="/assets/logos/sector3-logo.svg" alt="Sector3 Racing logo" />
+      </a>
 
-  <!--
-  Title Partner (future)
-  Uncomment when ready
-  -->
-  <!--
-  <a class="footer-partner footer-partner--primary"
-     href="/partners/#title-partner"
-     aria-label="Title partner">
-    <img src="/assets/logos/partners/title-partner.svg"
-         alt="Title partner logo" />
-  </a>
-  -->
-</div>
+      <!--
+      Title Partner (future)
+      Uncomment when ready
+      -->
+      <!--
+      <a class="footer-partner footer-partner--primary" href="/partners/#title-partner" aria-label="Title partner">
+        <img src="/assets/logos/partners/title-partner.svg" alt="Title partner logo" />
+      </a>
+      -->
+    </div>
 
-
-    <div class="footer-partners">
-      <a class="footer-partner" href="/partners/#bosch">
+    <!-- Partners strip -->
+    <div class="footer-partners" aria-label="Partners">
+      <a class="footer-partner" href="/partners/#bosch" aria-label="Bosch">
         <img src="/assets/logos/partners/bosch.svg" alt="Bosch logo" />
       </a>
-      <a class="footer-partner" href="/partners/#hydrauc-systems">
+      <a class="footer-partner" href="/partners/#hydrauc-systems" aria-label="Hydrauc Systems">
         <img src="/assets/logos/partners/hydrauc-systems.svg" alt="Hydrauc Systems logo" />
       </a>
-      <a class="footer-partner" href="/partners/#isla-vi">
+      <a class="footer-partner" href="/partners/#isla-vi" aria-label="Isla VI">
         <img src="/assets/logos/partners/isla-vi.svg" alt="Isla VI logo" />
       </a>
-      <a class="footer-partner" href="/partners/#elling-sons">
+      <a class="footer-partner" href="/partners/#elling-sons" aria-label="Elling &amp; Sons">
         <img src="/assets/logos/partners/elling-sons.svg" alt="Elling &amp; Sons logo" />
       </a>
     </div>
 
+    <!-- Footer navigation + info (two columns) -->
+    <div class="footer-links" aria-label="Footer links">
+      <!-- Left: Navigation (same as header, minus Contact) -->
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-list">
+          <li><a href="/team/">Team</a></li>
+          <li><a href="/cars/">Cars</a></li>
+          <li><a href="/racing/">Racing</a></li>
+          <li><a href="/partners/">Partners</a></li>
+          <li><a href="https://shop.sector3racing.com" target="_blank" rel="noopener noreferrer">Shop</a></li>
+        </ul>
+      </div>
+
+      <!-- Right: Information -->
+      <div class="footer-col">
+        <div class="footer-col-title">Information</div>
+        <ul class="footer-list">
+          <li><a href="/media/">Media</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Careers</a></li>
+
+          <li class="footer-list-sep"></li>
+
+          <li><a href="/legal/privacy/">Privacy Policy</a></li>
+          <li><a href="/legal/terms/">Terms of Use</a></li>
+          <li><a href="/legal/cookies/">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Final legal bar (copyright only) -->
     <div class="footer-bottom">
       <div class="footer-legal">
         © <span id="year"></span> Sector3 Racing. All rights reserved.
@@ -213,7 +240,6 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 
 </body>
 </html>
