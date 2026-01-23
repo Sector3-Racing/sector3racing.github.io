@@ -1,101 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
+  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 | Sector3 Racing</title>
+  <title>Page not found – Sector3 Racing</title>
 
-  <meta name="robots" content="noindex" />
   <meta name="theme-color" content="#1b0040" />
 
   <link rel="stylesheet" href="https://use.typekit.net/dis6mlt.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/assets/js/site.js" defer></script>
 
-  <style>
-    .error-hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background-image:
-        linear-gradient(rgba(11, 11, 16, 0.86), rgba(11, 11, 16, 0.86)),
-        url("assets/img/404-bg.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .error-wrap {
-      max-width: 560px;
-    }
-
-    .error-top {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-      opacity: 0.95;
-    }
-
-    .error-top img {
-      width: 34px;
-      height: 34px;
-      display: block;
-    }
-
-    .error-top span {
-      font-family: var(--font-display);
-      font-weight: 600;
-      letter-spacing: 0.3px;
-    }
-
-    .error-code {
-      font-family: var(--font-display);
-      font-size: 4rem;
-      font-weight: 600;
-      letter-spacing: 0.6px;
-      margin: 0 0 0.75rem 0;
-    }
-
-    .error-sub {
-      color: var(--muted);
-      margin: 0 0 2rem 0;
-      font-size: 1.05rem;
-    }
-
-    .error-actions a {
-      display: inline-block;
-      margin-right: 1.25rem;
-      text-decoration: none;
-      font-weight: 500;
-      color: var(--text);
-      border-bottom: 1px solid var(--text);
-      padding-bottom: 2px;
-    }
-
-    .error-actions a:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-  </style>
 </head>
 
 <body>
-  <main class="error-hero">
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Sector3 Racing homepage">
+      <img
+        class="brand-wordmark"
+        src="/assets/logos/sector3-wordmark.svg"
+        alt="Sector3 Racing"
+      />
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="https://shop.sector3racing.com" target="_blank" rel="noopener noreferrer">Shop</a>
+      <a href="/team/">Team</a>
+      <a href="/cars/">Cars</a>
+      <a href="/racing/">Racing</a>
+      <a href="/partners/">Partners</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="navOverlay"
+    >
+      <span class="nav-toggle-lines" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <!-- Mobile overlay menu -->
+  <div class="nav-overlay" id="navOverlay" hidden>
+    <div class="nav-overlay-inner">
+      <div class="nav-overlay-header">
+        <a class="nav-overlay-brand" href="/" aria-label="Sector3 Racing home">
+          <img
+            class="brand-wordmark"
+            src="/assets/logos/sector3-wordmark.svg"
+            alt="Sector3 Racing"
+          />
+        </a>
+
+        <button class="nav-close" type="button" aria-label="Close menu">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="nav-overlay-links" role="navigation" aria-label="Mobile navigation">
+        <a href="https://shop.sector3racing.com" target="_blank" rel="noopener noreferrer">Shop</a>
+        <a href="/team/">Team</a>
+        <a href="/cars/">Cars</a>
+        <a href="/racing/">Racing</a>
+        <a href="/partners/">Partners</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+  
+  <main class="section">
     <div class="container">
-      <div class="error-wrap">
-        <div class="error-top">
-          <img src="assets/logos/sector3-mark.svg" alt="Sector3 Racing logo" />
-          <span>Sector3 Racing</span>
+      <div class="error-content">
+        <div class="error-code">404</div>
+
+        <p class="error-sub">
+          The link you followed may be broken or the page may have been removed.
+        </p>
+
+        <ul class="error-list">
+          <li>Double-check the URL for typos.</li>
+          <li>Return to the homepage or use the links below to navigate.</li>
+          <li>
+            If you believe this is an error,
+            <a href="/contact/">contact us</a>
+            and we’ll help you find what you’re looking for.
+          </li>
+        </ul>
+
+        <div class="error-cta">
+          <a class="btn btn-ghost error-home" href="/">Return to homepage</a>
         </div>
 
-        <div class="error-code">404</div>
-        <p class="error-sub">You have reached a section of the circuit that has not been driven yet.</p>
+        <div class="error-sitemap" aria-label="Site map">
+          <div class="error-sitemap-title">Popular pages</div>
+          <div class="error-sitemap-links">
+            <a href="/team/">Team</a>
+            <a href="/cars/">Cars</a>
+            <a href="/racing/">Racing</a>
+            <a href="/partners/">Partners</a>
+            <a href="/contact/">Contact</a>
+            <a href="https://shop.sector3racing.com" target="_blank" rel="noopener noreferrer">Shop</a>
+          </div>
+        </div>
 
-        <div class="error-actions">
-          <a href="/">Return to homepage</a>
-          <a href="/contact">Contact</a>
+        <div class="error-telemetry" data-page="404" data-referrer="">
+          <span class="muted small">Ref: <span id="err-ref"></span></span>
         </div>
       </div>
     </div>
   </main>
+
+  <script>
+    const ref = Math.random().toString(36).slice(2, 10).toUpperCase();
+    document.getElementById("err-ref").textContent = ref;
+  </script>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-top-logos" aria-label="Team and title partner logos">
+  <!-- Sector3 Racing -->
+  <a class="footer-partner footer-partner--primary"
+     href="/"
+     aria-label="Sector3 Racing home">
+    <img src="/assets/logos/sector3-logo.svg" alt="Sector3 Racing logo" />
+  </a>
+
+  <!--
+  Title Partner (future)
+  Uncomment when ready
+  -->
+  <!--
+  <a class="footer-partner footer-partner--primary"
+     href="/partners/#title-partner"
+     aria-label="Title partner">
+    <img src="/assets/logos/partners/title-partner.svg"
+         alt="Title partner logo" />
+  </a>
+  -->
+</div>
+
+
+    <div class="footer-partners">
+      <a class="footer-partner" href="/partners/#bosch">
+        <img src="/assets/logos/partners/bosch.svg" alt="Bosch logo" />
+      </a>
+      <a class="footer-partner" href="/partners/#hydrauc-systems">
+        <img src="/assets/logos/partners/hydrauc-systems.svg" alt="Hydrauc Systems logo" />
+      </a>
+      <a class="footer-partner" href="/partners/#isla-vi">
+        <img src="/assets/logos/partners/isla-vi.svg" alt="Isla VI logo" />
+      </a>
+      <a class="footer-partner" href="/partners/#elling-sons">
+        <img src="/assets/logos/partners/elling-sons.svg" alt="Elling &amp; Sons logo" />
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        © <span id="year"></span> Sector3 Racing. All rights reserved.
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
