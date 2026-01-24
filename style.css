@@ -630,13 +630,15 @@ body.nav-open {
 
 .footer-links {
   width: 100%;
-  max-width: 1440px;
+  max-width: 980px;              /* key change: prevents wide empty middle */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-top: 0.5rem;
+  gap: 4rem;                     /* intentional column separation */
+  margin-top: 0.25rem;
   padding-top: 1.25rem;
+  justify-content: center;       /* keeps the whole block centered */
 }
+
 
 .footer-col {
   width: 100%;
