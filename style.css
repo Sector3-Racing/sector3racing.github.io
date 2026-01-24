@@ -630,13 +630,15 @@ body.nav-open {
 
 .footer-links {
   width: 100%;
-  max-width: 1440px;
+  max-width: 980px;              /* key change: prevents wide empty middle */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-top: 0.5rem;
+  gap: 4rem;                     /* intentional column separation */
+  margin-top: 0.25rem;
   padding-top: 1.25rem;
+  justify-content: center;       /* keeps the whole block centered */
 }
+
 
 .footer-col {
   width: 100%;
@@ -671,13 +673,6 @@ body.nav-open {
 .footer-list a:hover {
   color: var(--text);
   background-color: var(--hover-bg);
-}
-
-/* Visual separator inside the info list (before legal links) */
-.footer-list-sep {
-  margin: 1rem 0;
-  height: 1px;
-  background: var(--border);
 }
 
 /* Mobile stacking */
