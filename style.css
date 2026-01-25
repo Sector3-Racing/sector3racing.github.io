@@ -161,11 +161,17 @@ p {
   max-width: 520px;
 }
 
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
 /* Desktop nav */
 .nav a {
   color: var(--muted);
   text-decoration: none;
-  margin-left: 1.25rem;
+  margin-left: 0;
   font-size: 0.95rem;
   font-weight: 400;
   padding: 0.25rem 0.4rem;
@@ -566,172 +572,215 @@ body.nav-open {
 
 /* Shared logo link */
 .footer-partner {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.5rem 0.25rem;
-  border-radius: var(--radius-sm);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 0.25rem;
+    border-radius: var(--radius-sm);
 }
 
-.footer-partner img {
-  display: block;
-  width: 100%;
-  max-width: 240px;
-  height: auto;
-  max-height: 58px;
+    /* Default partner logos: size by height for consistency */
+    .footer-partner img {
+        display: block;
+        width: auto;
+        height: 58px;
+        max-width: 240px;
+        object-fit: contain;
+        opacity: 0.9;
+        transform: scale(1);
+        transition: opacity 160ms ease, transform 160ms ease;
+    }
 
-  opacity: 0.9;
-  transform: scale(1);
-  transition: opacity 160ms ease, transform 160ms ease;
-}
+    .footer-partner:hover img,
+    .footer-partner:focus-visible img {
+        opacity: 1;
+        transform: scale(1.03);
+    }
 
-.footer-partner:hover img,
-.footer-partner:focus-visible img {
-  opacity: 1;
-  transform: scale(1.03);
-}
-
-/* Primary logo (team / title partner) */
+/* Primary logo (team / title partner): stable sizing across widths */
 .footer-partner--primary img {
-  max-width: 400px;
-  max-height: 110px;
+    height: 110px;
+    width: auto;
+    max-width: min(420px, 85vw);
+    object-fit: contain;
 }
 
 /* Partner logo strip */
 .footer-partners {
-  width: 100%;
-  max-width: 1440px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem 2.25rem;
-  align-items: center;
-  justify-items: center;
-  padding: 0 0.5rem;
+    width: 100%;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem 2.25rem;
+    align-items: center;
+    justify-items: center;
+    padding: 0 0.5rem;
 }
 
-/* Legal row always below partners */
-.footer-bottom {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  border-top: 1px solid var(--border);
-  padding-top: 1.25rem;
+/* Small screens: slightly reduce heights so nothing feels oversized */
+@media (max-width: 640px) {
+    .footer-partner img {
+        height: 54px;
+        max-width: 220px;
+    }
+
+    .footer-partner--primary img {
+        height: 96px;
+        max-width: min(360px, 90vw);
+    }
 }
 
-.footer-legal {
-  color: var(--muted);
-  text-align: center;
-}
 
 /* =========================================================
-   Footer: navigation + information columns
+   Footer: legal utility bar (reference style)
 ========================================================= */
 
-.footer-links {
-  width: 100%;
-  max-width: 980px;              /* key change: prevents wide empty middle */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;                     /* intentional column separation */
-  margin-top: 0.25rem;
-  padding-top: 1.25rem;
-  justify-content: center;       /* keeps the whole block centered */
+.footer-bottom {
+    width: 100%;
+    margin-top: 0.25rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.1rem;
 }
 
-
-.footer-col {
-  width: 100%;
+.footer-bottom-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
 }
 
-.footer-col-title {
-  font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: 0.15px;
-  color: var(--text);
-  margin-bottom: 0.9rem;
-}
-
-.footer-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-list li {
-  margin: 0.6rem 0;
-}
-
-.footer-list a {
-  color: var(--muted);
-  text-decoration: none;
-  padding: 0.15rem 0.25rem;
-  border-radius: var(--radius-sm);
-  transition: background-color 160ms ease, color 160ms ease;
-}
-
-.footer-list a:hover {
-  color: var(--text);
-  background-color: var(--hover-bg);
-}
-
-/* Mobile stacking */
-@media (max-width: 640px) {
-  .footer-links {
-    grid-template-columns: 1fr;
+.footer-legal-left {
+    display: flex;
+    align-items: center;
     gap: 2rem;
-  }
+    min-width: 0;
 }
 
+.footer-legal-label {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0.15px;
+    color: var(--text);
+    opacity: 0.95;
+}
+
+.footer-legal-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+    .footer-legal-links a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.92rem;
+        opacity: 0.9;
+        padding: 0.15rem 0.25rem;
+        border-radius: var(--radius-sm);
+        transition: background-color 160ms ease, opacity 160ms ease;
+    }
+
+        .footer-legal-links a:hover {
+            background-color: var(--hover-bg);
+            opacity: 1;
+        }
+
+.footer-legal-right {
+    color: var(--text);
+    opacity: 0.9;
+    font-weight: 500;
+    font-size: 0.92rem;
+    white-space: nowrap;
+}
+
+/* Mobile: stack like a compact bar */
+@media (max-width: 640px) {
+    .footer-bottom-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-legal-right {
+        white-space: normal;
+    }
+}
 
 
 /* =========================================================
    Responsive
 ========================================================= */
 
+/* Switch to hamburger before the desktop nav starts wrapping */
+@media (max-width: 980px) {
+    .nav {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Wordmark stays reasonable at tablet widths */
+    .brand-wordmark {
+        height: 24px;
+        max-width: 70vw;
+    }
+}
+
 @media (max-width: 640px) {
-  /* Slightly tighter padding helps the header */
-  .container { padding: 0 1rem; }
+    /* Slightly tighter padding helps the header */
+    .container {
+        padding: 0 1rem;
+    }
 
-  /* Header layout */
-  .nav { display: none; }
-  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+    /* Header layout */
+    .header-inner {
+        height: 64px;
+        gap: 0.75rem;
+    }
 
-  .header-inner {
-    height: 64px;
-    gap: 0.75rem;
-  }
+    /* Wordmark scales down so the hamburger is not cramped */
+    .brand-wordmark {
+        height: 22px;
+        max-width: 78vw;
+    }
 
-  /* Wordmark scales down so the hamburger is not cramped */
-  .brand-wordmark {
-    height: 22px;
-    max-width: 78vw;
-  }
+    /* Overlay header also tightens */
+    .nav-overlay-header {
+        padding-bottom: 0.9rem;
+        gap: 0.75rem;
+    }
 
-  /* Overlay header also tightens */
-  .nav-overlay-header {
-    padding-bottom: 0.9rem;
-    gap: 0.75rem;
-  }
+    .nav-close {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
 
-  .nav-close {
-    width: 40px;
-    height: 40px;
-    font-size: 1.4rem;
-  }
+    .nav-overlay-brand .brand-wordmark {
+        height: 22px;
+        max-width: 72vw;
+    }
 
-  .nav-overlay-brand .brand-wordmark {
-    height: 22px;
-    max-width: 72vw;
-  }
+    /* Footer logo sizing on small screens */
+    .footer-partner img {
+        height: 54px;
+        max-width: 220px;
+    }
 
-  /* Footer logo sizing on small screens */
-  .footer-partner--primary img {
-    max-width: 340px;
-    max-height: 96px;
-  }
+    .footer-partner--primary img {
+        height: 120px;
+        max-width: min(520px, 92vw);
+    }
 
-  .footer-partner img {
-    max-height: 54px;
-  }
+    .footer-top-logos {
+        gap: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
 }
