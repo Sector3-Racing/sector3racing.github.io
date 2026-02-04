@@ -330,14 +330,18 @@ body.nav-open {
 }
 
 .hero {
-  padding: 6.25rem 0 5.25rem;
+  /* Taller hero */
+  min-height: 62vh;              /* increase to 70vh or 80vh if you want more image */
+  display: flex;
+  align-items: center;           /* centers the text vertically */
+  padding: 6.25rem 0;            /* keeps safe spacing under the sticky header */
 
-  /* default / fallback hero */
+  /* Background */
   background-image:
     linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
     url("/assets/img/hero-01.jpg");
   background-size: cover;
-  background-position: center var(--hero-pos-y);
+  background-position: center var(--hero-pos-y, 75%);
   background-repeat: no-repeat;
 }
 
