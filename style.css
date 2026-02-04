@@ -898,3 +898,47 @@ body.nav-open {
         margin-bottom: 0.25rem;
     }
 }
+
+/* =========================================================
+   Partners
+========================================================= */
+
+.partner-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.partner-tile {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  text-decoration: none;
+}
+
+.partner-tile-logo {
+  width: 100%;
+  height: 64px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.partner-tile-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.15px;
+  color: var(--text);
+  margin: 0;
+}
+
+.partner-tile-meta {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .partner-tile-logo { height: 56px; }
+}
+
