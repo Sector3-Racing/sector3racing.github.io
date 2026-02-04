@@ -349,6 +349,38 @@ body.nav-open {
   flex-wrap: wrap;
 }
 
+.hero {
+  padding: 6.25rem 0 5.25rem;
+
+  /* default fallback */
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-01.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hero auditions */
+.hero[data-hero="01"] {
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-01.jpg");
+}
+
+.hero[data-hero="02"] {
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-02.jpg");
+}
+
+.hero[data-hero="03"] {
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-03.jpg");
+}
+
+
 /* =========================================================
    Layout Components
 ========================================================= */
