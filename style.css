@@ -324,24 +324,34 @@ body.nav-open {
    Hero
 ========================================================= */
 
-/* Adjust this one value to move the visible part of the hero image */
 :root {
-  --hero-pos-y: 90%;
+  /* Default hero crop (move image up/down) */
+  --hero-pos-y: 75%;
+  /* Default hero height */
+  --hero-min-h: 62vh;
+
+  /* Mobile tuning */
+  --hero-pos-y-mobile: 85%;
+  --hero-min-h-mobile: 70vh;
+
+  /* Overlay strength */
+  --hero-overlay: 0.78;
+
+  /* Default fallback hero image */
+  --hero-img: url("/assets/img/hero-home.jpg");
 }
 
 .hero {
-  /* Taller hero */
-  min-height: 70vh;              /* increase to 70vh or 80vh if you want more image */
+  min-height: var(--hero-min-h);
   display: flex;
-  align-items: center;           /* centers the text vertically */
-  padding: 6.25rem 0;            /* keeps safe spacing under the sticky header */
+  align-items: center;
 
-  /* Background */
+  padding: 6.25rem 0;
   background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-01.jpg");
+    linear-gradient(rgba(11,11,16,var(--hero-overlay)), rgba(11,11,16,var(--hero-overlay))),
+    var(--hero-img);
   background-size: cover;
-  background-position: center var(--hero-pos-y, 75%);
+  background-position: center var(--hero-pos-y);
   background-repeat: no-repeat;
 }
 
@@ -366,82 +376,31 @@ body.nav-open {
   flex-wrap: wrap;
 }
 
-/* Hero auditions */
-.hero[data-hero="01"] {
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-01.jpg");
-}
+/* Per-page hero images (set by body class) */
+.page-home     { --hero-img: url("/assets/img/hero-home.jpg"); }
+.page-team     { --hero-img: url("/assets/img/hero-team.jpg"); }
+.page-cars     { --hero-img: url("/assets/img/hero-cars.jpg"); }
+.page-racing   { --hero-img: url("/assets/img/hero-racing.jpg"); }
+.page-partners { --hero-img: url("/assets/img/hero-partners.jpg"); }
+.page-media    { --hero-img: url("/assets/img/hero-media.jpg"); }
+.page-contact  { --hero-img: url("/assets/img/hero-contact.jpg"); }
+.page-legal    { --hero-img: url("/assets/img/hero-legal.jpg"); }
 
-.hero[data-hero="02"] {
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-02.jpg");
-}
+/* Optional: per-page crop tweaks (only if needed)
+.page-cars { --hero-pos-y: 65%; }
+.page-team { --hero-pos-y: 80%; }
+*/
 
-.hero[data-hero="03"] {
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-03.jpg");
-}
-
-/* Mobile usually needs a slightly lower crop */
+/* Mobile adjustments */
 @media (max-width: 640px) {
   .hero {
-    --hero-pos-y: 85%;
+    min-height: var(--hero-min-h-mobile);
+    align-items: flex-end;
+    padding: 6rem 0 4.25rem;
+
+    background-position: center var(--hero-pos-y-mobile);
   }
 }
-
-/* Default hero image fallback */
-.hero {
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-01.jpg");
-}
-
-/* Per page hero images */
-.page-home .hero {
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-home.jpg");
-}
-
-.page-team .hero {
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-team.jpg");
-}
-
-.page-cars .hero {
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-cars.jpg");
-}
-
-.page-racing .hero {
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-racing.jpg");
-}
-
-.page-partners .hero {
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-partners.jpg");
-}
-
-.page-media .hero {
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-media.jpg");
-}
-
-.page-contact .hero {
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-contact.jpg");
-}
-
 
 
 /* =========================================================
