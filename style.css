@@ -392,6 +392,56 @@ body.nav-open {
   }
 }
 
+/* Default hero image fallback */
+.hero {
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-01.jpg");
+}
+
+/* Per page hero images */
+.page-home .hero {
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-home.jpg");
+}
+
+.page-team .hero {
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-team.jpg");
+}
+
+.page-cars .hero {
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-cars.jpg");
+}
+
+.page-racing .hero {
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-racing.jpg");
+}
+
+.page-partners .hero {
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-partners.jpg");
+}
+
+.page-media .hero {
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-media.jpg");
+}
+
+.page-contact .hero {
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-contact.jpg");
+}
+
 
 
 /* =========================================================
