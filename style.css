@@ -324,8 +324,21 @@ body.nav-open {
    Hero
 ========================================================= */
 
+/* Adjust this one value to move the visible part of the hero image */
+:root {
+  --hero-pos-y: 75%;
+}
+
 .hero {
   padding: 6.25rem 0 5.25rem;
+
+  /* default / fallback hero */
+  background-image:
+    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
+    url("/assets/img/hero-01.jpg");
+  background-size: cover;
+  background-position: center var(--hero-pos-y);
+  background-repeat: no-repeat;
 }
 
 .hero h1 {
@@ -349,18 +362,6 @@ body.nav-open {
   flex-wrap: wrap;
 }
 
-.hero {
-  padding: 6.25rem 0 5.25rem;
-
-  /* default fallback */
-  background-image:
-    linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
-    url("/assets/img/hero-01.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 /* Hero auditions */
 .hero[data-hero="01"] {
   background-image:
@@ -379,6 +380,14 @@ body.nav-open {
     linear-gradient(rgba(11,11,16,0.78), rgba(11,11,16,0.78)),
     url("/assets/img/hero-03.jpg");
 }
+
+/* Mobile usually needs a slightly lower crop */
+@media (max-width: 640px) {
+  .hero {
+    --hero-pos-y: 85%;
+  }
+}
+
 
 
 /* =========================================================
