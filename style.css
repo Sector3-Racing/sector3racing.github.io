@@ -326,7 +326,7 @@ body.nav-open {
 
 /* Adjust this one value to move the visible part of the hero image */
 :root {
-  --hero-pos-y: 75%;
+  --hero-pos-y: 90%;
 }
 
 .hero {
