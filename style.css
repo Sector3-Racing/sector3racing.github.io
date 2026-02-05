@@ -390,7 +390,9 @@ body.nav-open {
 
 */
 .page-team { --hero-pos-y: 40%; }
-.page-cars { --hero-pos-y: 65%; }
+.page-cars { --hero-pos-y: 50%; }
+.page-racing { --hero-pos-y: 50%; }
+.page-partners { --hero-pos-y: 90%; }
 
 /* Make hero start behind the sticky header */
 .hero {
