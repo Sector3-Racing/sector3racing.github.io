@@ -387,10 +387,10 @@ body.nav-open {
 .page-legal    { --hero-img: url("/assets/img/hero-legal.jpg"); }
 
 /* Optional: per-page crop tweaks (only if needed)
-.page-cars { --hero-pos-y: 65%; }
-*/
-.page-team { --hero-pos-y: 50%; }
 
+*/
+.page-team { --hero-pos-y: 40%; }
+.page-cars { --hero-pos-y: 65%; }
 
 /* Make hero start behind the sticky header */
 .hero {
