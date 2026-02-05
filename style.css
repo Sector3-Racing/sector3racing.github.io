@@ -391,6 +391,12 @@ body.nav-open {
 .page-team { --hero-pos-y: 80%; }
 */
 
+/* Make hero start behind the sticky header */
+.hero {
+  margin-top: -68px;                 /* header height on desktop */
+  padding-top: calc(6.25rem + 68px); /* keep text clear of header */
+}
+
 /* Mobile adjustments */
 @media (max-width: 640px) {
   .hero {
@@ -897,6 +903,13 @@ body.nav-open {
         gap: 1.25rem;
         margin-bottom: 0.25rem;
     }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    margin-top: -64px;                /* header height on mobile */
+    padding-top: calc(6rem + 64px);   /* match your mobile hero padding */
+  }
 }
 
 /* =========================================================
