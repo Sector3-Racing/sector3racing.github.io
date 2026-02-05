@@ -388,8 +388,9 @@ body.nav-open {
 
 /* Optional: per-page crop tweaks (only if needed)
 .page-cars { --hero-pos-y: 65%; }
-.page-team { --hero-pos-y: 80%; }
 */
+.page-team { --hero-pos-y: 50%; }
+
 
 /* Make hero start behind the sticky header */
 .hero {
