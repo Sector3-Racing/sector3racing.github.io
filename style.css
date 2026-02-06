@@ -958,3 +958,42 @@ body.nav-open {
   .partner-tile-logo { height: 56px; }
 }
 
+/* =========================================================
+   Partners hub tiles
+========================================================= */
+
+.partner-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.partner-tile {
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  text-decoration: none;
+  text-align: center;
+}
+
+.partner-tile-logo {
+  width: 100%;
+  height: 72px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.partner-tile-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.15px;
+  color: var(--text);
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 640px) {
+  .partner-tile-logo { height: 64px; }
+}
+
