@@ -50,9 +50,34 @@ body {
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.65;
+}
 
-  /* Fixed header reserve space */
-  padding-top: 68px;
+/* Reserve header space for all pages EXCEPT the hero, which we pull up manually */
+body { padding-top: 68px; }
+.page-home .hero,
+.page-team .hero,
+.page-cars .hero,
+.page-racing .hero,
+.page-partners .hero,
+.page-media .hero,
+.page-contact .hero,
+.page-legal .hero {
+  margin-top: -68px;
+}
+
+@media (max-width: 640px) {
+  body { padding-top: 64px; }
+
+  .page-home .hero,
+  .page-team .hero,
+  .page-cars .hero,
+  .page-racing .hero,
+  .page-partners .hero,
+  .page-media .hero,
+  .page-contact .hero,
+  .page-legal .hero {
+    margin-top: -64px;
+  }
 }
 
 .container {
@@ -133,7 +158,8 @@ p {
   right: 0;
   z-index: 1000;
 
-  background-color: var(--header-bg-top);
+  background-color: transparent;
+  /* background-color: var(--header-bg-top); */
   border-bottom: 1px solid transparent;
   backdrop-filter: none;
 
@@ -360,6 +386,19 @@ body.nav-open { overflow: hidden; }
   display: flex;
   gap: 0.9rem;
   flex-wrap: wrap;
+}
+
+/* Hero behind fixed header (image shows behind header at top) */
+.hero {
+  margin-top: -68px;                 /* pull hero up behind header */
+  padding-top: calc(6.25rem + 68px); /* keep hero text clear of header */
+}
+
+@media (max-width: 640px) {
+  .hero {
+    margin-top: -64px;
+    padding-top: calc(6rem + 64px);
+  }
 }
 
 /* Per-page hero images */
