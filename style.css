@@ -407,9 +407,9 @@ body.nav-open { overflow: hidden; }
 .page-cars     { --hero-img: url("/assets/img/hero-cars.jpg"); }
 .page-racing   { --hero-img: url("/assets/img/hero-racing.jpg"); }
 .page-partners { --hero-img: url("/assets/img/hero-partners.webp"); }
-.page-media    { --hero-img: url("/assets/img/hero-media.jpg"); }
-.page-contact  { --hero-img: url("/assets/img/hero-contact.jpg"); }
-.page-legal    { --hero-img: url("/assets/img/hero-legal.jpg"); }
+.page-media    { --hero-img: url("/assets/img/hero-partners.webp"); }
+.page-contact  { --hero-img: url("/assets/img/hero-partners.webp"); }
+.page-legal    { --hero-img: url("/assets/img/hero-partners.webp"); }
 
 /* Optional per-page crop tweaks */
 .page-team     { --hero-pos-y: 40%; }
