@@ -1,0 +1,35 @@
+{
+  "tiersOrder": ["title", "principal", "team", "suppliers", "regional"],
+  "tiers": {
+    "title": {
+      "label": "Title Partner",
+      "enabled": false,
+      "items": []
+    },
+    "principal": {
+      "label": "Principal Partners",
+      "enabled": false,
+      "items": []
+    },
+    "team": {
+      "label": "Team Partners",
+      "enabled": true,
+      "items": [
+        { "name": "Bosch", "slug": "bosch", "logo": "/assets/logos/partners/bosch.svg", "url": "https://www.bosch.com/" },
+        { "name": "Hydrauc Systems", "slug": "hydrauc-systems", "logo": "/assets/logos/partners/hydrauc-systems.svg", "url": "" },
+        { "name": "Isla VI", "slug": "isla-vi", "logo": "/assets/logos/partners/isla-vi.svg", "url": "" },
+        { "name": "Elling & Sons", "slug": "elling-sons", "logo": "/assets/logos/partners/elling-sons.svg", "url": "" }
+      ]
+    },
+    "suppliers": {
+      "label": "Team Suppliers",
+      "enabled": true,
+      "items": []
+    },
+    "regional": {
+      "label": "Regional Partners",
+      "enabled": true,
+      "items": []
+    }
+  }
+}

@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
-  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page not found – Sector3 Racing</title>
+  <title>Page not found | Sector3 Racing</title>
 
   <meta name="theme-color" content="#1b0040" />
 
+  <!-- Adobe Fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/dis6mlt.css" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+
   <link rel="stylesheet" href="/style.css" />
   <script src="/assets/js/site.js" defer></script>
-
 </head>
 
 <body>
-
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="Sector3 Racing homepage">
-      <img
-        class="brand-wordmark"
-        src="/assets/logos/sector3-wordmark.svg"
-        alt="Sector3 Racing"
-      />
+      <img class="brand-wordmark" src="/assets/logos/sector3-wordmark.svg" alt="Sector3 Racing" />
     </a>
 
     <!-- Desktop nav -->
@@ -36,7 +35,6 @@
       <a href="/cars/">Cars</a>
       <a href="/racing/">Racing</a>
       <a href="/partners/">Partners</a>
-      <a href="/contact/">Contact</a>
     </nav>
 
     <!-- Mobile menu button -->
@@ -56,11 +54,7 @@
     <div class="nav-overlay-inner">
       <div class="nav-overlay-header">
         <a class="nav-overlay-brand" href="/" aria-label="Sector3 Racing home">
-          <img
-            class="brand-wordmark"
-            src="/assets/logos/sector3-wordmark.svg"
-            alt="Sector3 Racing"
-          />
+          <img class="brand-wordmark" src="/assets/logos/sector3-wordmark.svg" alt="Sector3 Racing" />
         </a>
 
         <button class="nav-close" type="button" aria-label="Close menu">
@@ -74,84 +68,68 @@
         <a href="/cars/">Cars</a>
         <a href="/racing/">Racing</a>
         <a href="/partners/">Partners</a>
-        <a href="/contact/">Contact</a>
       </div>
     </div>
   </div>
 </header>
 
+<main class="section">
+  <div class="container">
+    <div class="error-content">
+      <div class="error-code">404</div>
 
+      <p class="error-sub">
+        The link you followed may be broken or the page may have been removed.
+      </p>
 
-  
-  <main class="section">
-    <div class="container">
-      <div class="error-content">
-        <div class="error-code">404</div>
+      <ul class="error-list">
+        <li>Double-check the URL for typos.</li>
+        <li>Return to the homepage or use the links below to navigate.</li>
+        <li>
+          If you believe this is an error,
+          <a href="/contact/">contact us</a>
+          and we’ll help you find what you’re looking for.
+        </li>
+      </ul>
 
-        <p class="error-sub">
-          The link you followed may be broken or the page may have been removed.
-        </p>
+      <div class="error-cta">
+        <a class="btn btn-ghost error-home" href="/">Return to homepage</a>
+      </div>
 
-        <ul class="error-list">
-          <li>Double-check the URL for typos.</li>
-          <li>Return to the homepage or use the links below to navigate.</li>
-          <li>
-            If you believe this is an error,
-            <a href="/contact/">contact us</a>
-            and we’ll help you find what you’re looking for.
-          </li>
-        </ul>
-
-        <div class="error-cta">
-          <a class="btn btn-ghost error-home" href="/">Return to homepage</a>
-        </div>
-
-        <div class="error-sitemap" aria-label="Site map">
-          <div class="error-sitemap-title">Popular pages</div>
-          <div class="error-sitemap-links">
-            <a href="/team/">Team</a>
-            <a href="/cars/">Cars</a>
-            <a href="/racing/">Racing</a>
-            <a href="/partners/">Partners</a>
-            <a href="/contact/">Contact</a>
-            <a href="https://shop.sector3racing.com" target="_blank" rel="noopener noreferrer">Shop</a>
-          </div>
-        </div>
-
-        <div class="error-telemetry" data-page="404" data-referrer="">
-          <span class="muted small">Ref: <span id="err-ref"></span></span>
+      <div class="error-sitemap" aria-label="Site map">
+        <div class="error-sitemap-title">Popular pages</div>
+        <div class="error-sitemap-links">
+          <a href="/team/">Team</a>
+          <a href="/cars/">Cars</a>
+          <a href="/racing/">Racing</a>
+          <a href="/partners/">Partners</a>
+          <a href="/contact/">Contact</a>
+          <a href="/media/">Media</a>
+          <a href="https://shop.sector3racing.com" target="_blank" rel="noopener noreferrer">Shop</a>
         </div>
       </div>
+
+      <div class="error-telemetry" data-page="404" data-referrer="">
+        <span class="muted small">Ref: <span id="err-ref"></span></span>
+      </div>
     </div>
-  </main>
+  </div>
+</main>
 
-  <script>
-    const ref = Math.random().toString(36).slice(2, 10).toUpperCase();
-    document.getElementById("err-ref").textContent = ref;
-  </script>
+<script>
+  const ref = Math.random().toString(36).slice(2, 10).toUpperCase();
+  document.getElementById("err-ref").textContent = ref;
+</script>
 
-<!-- Global Footer -->
 <footer class="site-footer">
   <div class="container footer-inner">
 
-    <!-- Primary logo row (team now, title partner later) -->
     <div class="footer-top-logos" aria-label="Team and title partner logos">
       <a class="footer-partner footer-partner--primary" href="/" aria-label="Sector3 Racing home">
         <img src="/assets/logos/sector3-logo.svg" alt="Sector3 Racing logo" />
       </a>
-
-      <!--
-      Title Partner (future)
-      Uncomment when ready
-      -->
-      <!--
-      <a class="footer-partner footer-partner--primary" href="/partners/#title-partner" aria-label="Title partner">
-        <img src="/assets/logos/partners/title-partner.svg" alt="Title partner logo" />
-      </a>
-      -->
     </div>
 
-    <!-- Partners strip -->
     <div class="footer-partners" aria-label="Partners">
       <a class="footer-partner" href="/partners/#bosch" aria-label="Bosch">
         <img src="/assets/logos/partners/bosch.svg" alt="Bosch logo" />
@@ -167,41 +145,38 @@
       </a>
     </div>
 
-    <!-- Footer navigation + info (two columns) -->
-    <div class="footer-links" aria-label="Footer links">
-      <!-- Left: Navigation (same as header, minus Contact) -->
-      <div class="footer-col">
-        <div class="footer-col-title">Navigation</div>
-        <ul class="footer-list">
-          <li><a href="/team/">Team</a></li>
-          <li><a href="/cars/">Cars</a></li>
-          <li><a href="/racing/">Racing</a></li>
-          <li><a href="/partners/">Partners</a></li>
-          <li><a href="https://shop.sector3racing.com" target="_blank" rel="noopener noreferrer">Shop</a></li>
-        </ul>
-      </div>
+    <div class="footer-bottom" aria-label="Legal">
+      <div class="footer-bottom-inner">
+        <div class="footer-legal-left">
+  <nav class="footer-legal-links" aria-label="Footer links">
+    <a href="/media/">Media</a>
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Careers</a>
+    <a href="/contact/">Contact</a>
+    <a class="footer-legal-home" href="/legal/">Legal</a>
+    <a href="/legal/privacy/">Privacy</a>
+    <a href="/legal/cookies/">Cookies</a>
+    <a href="/legal/terms/">Terms</a>
+  </nav>
 
-      <!-- Right: Information -->
-      <div class="footer-col">
-        <div class="footer-col-title">Information</div>
-        <ul class="footer-list">
-          <li><a href="/media/">Media</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Careers</a></li>
+  <div class="footer-social" aria-label="Social media">
+    <a class="footer-social-link" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <img src="/assets/logos/social/instagram.svg" alt="" />
+    </a>
+    <a class="footer-social-link" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+      <img src="/assets/logos/social/x.svg" alt="" />
+    </a>
+    <a class="footer-social-link" href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+      <img src="/assets/logos/social/youtube.svg" alt="" />
+    </a>
+    <a class="footer-social-link" href="https://discord.gg/3bpzPHskJU" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+      <img src="/assets/logos/social/discord.svg" alt="" />
+    </a>
+  </div>
+</div>
 
-          <li class="footer-list-sep"></li>
-
-          <li><a href="/legal/privacy/">Privacy Policy</a></li>
-          <li><a href="/legal/terms/">Terms of Use</a></li>
-          <li><a href="/legal/cookies/">Cookie Policy</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Final legal bar (copyright only) -->
-    <div class="footer-bottom">
-      <div class="footer-legal">
-        © <span id="year"></span> Sector3 Racing. All rights reserved.
+        <div class="footer-legal-right">
+          © <span id="year"></span> Sector3 Racing
+        </div>
       </div>
     </div>
 
@@ -211,6 +186,5 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>

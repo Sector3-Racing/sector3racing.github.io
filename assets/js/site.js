@@ -1,10 +1,16 @@
-(function () {
+// assets/js/site.js
+window.SiteInit = function SiteInit() {
   const header = document.getElementById("siteHeader");
   const overlay = document.getElementById("navOverlay");
   const toggle = document.querySelector(".nav-toggle");
   const closeBtn = document.querySelector(".nav-close");
 
+  // If header isn't present, nothing to init
   if (!header) return;
+
+  // Prevent double-binding if SiteInit runs more than once
+  if (window.__s3InitDone) return;
+  window.__s3InitDone = true;
 
   // Header scroll state
   const SCROLL_THRESHOLD = 24;
@@ -61,10 +67,7 @@
   // Close menu when navigating via overlay links
   if (overlay) {
     overlay.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => {
-        closeMenu();
-      });
+      a.addEventListener("click", () => closeMenu());
     });
   }
-})();
-
+};

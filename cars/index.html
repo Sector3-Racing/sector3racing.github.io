@@ -2,16 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cars | Sector3 Racing</title>
+
+  <meta name="description" content="Sector3 Racing cars and platforms: current builds, specs, and development direction." />
+  <meta name="theme-color" content="#1b0040" />
+
+  <link rel="stylesheet" href="https://use.typekit.net/dis6mlt.css" />
+
+  <link rel="icon" href="/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+
   <link rel="stylesheet" href="/style.css" />
+  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/layout.js" defer></script>
 </head>
-<body>
-  <main class="section">
+
+<body class="page-cars">
+
+<div id="siteHeaderMount"></div>
+
+<main>
+  <section class="hero">
     <div class="container">
       <h1>Cars</h1>
-      <p class="muted">This section is under development.</p>
-      <p><a href="/">Return to home</a></p>
+      <p class="hero-sub">
+        Platforms, specifications, and build philosophy. Updated as programs mature.
+      </p>
+      <div class="hero-cta">
+        <a class="btn" href="/partners/">Partners</a>
+        <a class="btn btn-ghost" href="/contact/">Contact</a>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Current Platforms</h2>
+      <p class="lede">Add your sim fleet, customer motorsport target platforms, or development builds here.</p>
+
+      <div class="grid three">
+        <div class="card">
+          <h3>Platform</h3>
+          <p class="muted">Series, class, and primary use case.</p>
+        </div>
+        <div class="card">
+          <h3>Platform</h3>
+          <p class="muted">Series, class, and primary use case.</p>
+        </div>
+        <div class="card">
+          <h3>Platform</h3>
+          <p class="muted">Series, class, and primary use case.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <h2>Build Standards</h2>
+      <p class="lede">A consistent approach to reliability, serviceability, and performance development.</p>
+
+      <div class="grid two">
+        <div class="card">
+          <h3>Reliability</h3>
+          <ul>
+            <li>Checklists and pre run inspection</li>
+            <li>Spare parts discipline</li>
+            <li>Failure logging</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Performance</h3>
+          <ul>
+            <li>Setup iteration and validation</li>
+            <li>Data review cadence</li>
+            <li>Repeatable test process</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="siteFooterMount"></div>
+  
 </body>
 </html>
