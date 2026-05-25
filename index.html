@@ -4,42 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sector3 Racing</title>
-
   <meta name="description" content="Sector3 Racing – performance-driven motorsport and sim racing team." />
   <meta name="theme-color" content="#1b0040" />
-
-  <!-- Adobe Fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/dis6mlt.css" />
-
-  <!-- Favicons -->
   <link rel="icon" href="/favicon/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
-
-  <!-- Global styles -->
   <link rel="stylesheet" href="/style.css" />
   <script src="/assets/js/site.js" defer></script>
   <script src="/assets/js/layout.js" defer></script>
-  <script src="/assets/js/partners-hub.js" defer></script>
-
-  
 </head>
-
 <body class="page-home">
 
 <div id="siteHeaderMount"></div>
+<div class="accent-line"></div>
 
 <main>
 
   <!-- Hero -->
-  <section class="hero" data-hero="02">
-
+  <section class="hero">
     <div class="container">
-      <h1>Precision. Discipline. Execution.</h1>
+      <span class="eyebrow">Motorsport · Sim Racing</span>
+      <h1>
+        <span class="line-wrap"><span class="line-in">Precision.</span></span>
+        <span class="line-wrap"><span class="line-in">Discipline.</span></span>
+        <span class="line-wrap"><span class="line-in">Execution.</span></span>
+      </h1>
       <p class="hero-sub">
-        A performance-focused racing organization operating at the intersection of engineering, data, and competition.
+        A performance-focused racing organisation operating at the intersection of engineering, data, and competition.
       </p>
       <div class="hero-cta">
         <a class="btn" href="/contact/">Contact</a>
@@ -48,55 +42,149 @@
     </div>
   </section>
 
-  <!-- Team -->
-  <section class="section">
+  <!-- Statement -->
+  <section class="statement-section">
     <div class="container">
-      <h2>Team</h2>
-      <p class="lede">
-        Sector3 Racing is built around methodical preparation, technical execution, and continuous improvement.
-      </p>
+      <div class="statement-inner" data-r>
+        <hr class="statement-rule" />
+        <p class="statement-text">
+          We believe the gap between amateur and professional motorsport is closed through process, not just talent. Every decision at Sector3 is engineered.
+        </p>
+      </div>
+    </div>
+  </section>
 
-      <div class="grid two">
-        <div class="card">
-          <h3>Drivers</h3>
-          <ul>
-            <li>To Be Announced</li>
-            <li>To Be Announced</li>
-            <li>To Be Announced</li>
-          </ul>
+  <hr class="divider" />
+
+  <!-- Cars -->
+  <section class="car-section">
+    <div class="container">
+      <div class="section-head" data-r>
+        <span class="eyebrow-section">Cars</span>
+        <h2>The machines.</h2>
+        <p class="lede">Engineered for the demands of competition. Built to extract every tenth.</p>
+      </div>
+      <div class="car-carousel" data-r>
+        <button class="car-arrow car-prev" id="carPrev" aria-label="Previous car">&#8592;</button>
+        <button class="car-arrow car-next" id="carNext" aria-label="Next car">&#8594;</button>
+        <div class="car-track" id="carTrack">
+          <div class="car-slide" data-state="active">
+            <img src="/assets/img/hero-cars.jpg" alt="Sector3 car" loading="lazy" />
+          </div>
+          <div class="car-slide" data-state="right">
+            <div class="car-slide-placeholder">
+              <span>Coming Soon</span>
+            </div>
+          </div>
+          <div class="car-slide-overlay"></div>
+          <div class="car-label-wrap" id="carLabel">
+            <div class="car-slide-label">
+              <span class="car-slide-name" id="carName">Current Specification</span>
+              <span class="car-slide-sub" id="carSub">Sim Racing · 2026</span>
+            </div>
+            <span class="car-counter" id="carCounter">01 / 02</span>
+          </div>
         </div>
-
-        <div class="card">
-          <h3>Operations</h3>
-          <ul>
-            <li>TBA - Team Principal</li>
-            <li>TBA - Engineering</li>
-            <li>TBA - Strategy</li>
-          </ul>
+        <div class="car-specs" id="carSpecs">
+          <div class="car-spec"><span class="car-spec-label">Series</span><span class="car-spec-value">Sim Racing</span></div>
+          <div class="car-spec"><span class="car-spec-label">Class</span><span class="car-spec-value">TBA</span></div>
+          <div class="car-spec"><span class="car-spec-label">Season</span><span class="car-spec-value">2026</span></div>
+          <div class="car-spec"><span class="car-spec-label">Status</span><span class="car-spec-value">Active</span></div>
+        </div>
+        <div class="car-dots" id="carDots">
+          <button class="car-dot active" data-i="0" aria-label="Car 1"></button>
+          <button class="car-dot" data-i="1" aria-label="Car 2"></button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Racing -->
+  <hr class="divider" />
+
+  <!-- Drivers -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head" data-r>
+        <span class="eyebrow-section">The Team</span>
+        <h2>Drivers.</h2>
+        <p class="lede">Competitive focus across sim racing and planned customer motorsport programmes.</p>
+      </div>
+      <div class="driver-grid">
+        <a class="driver-card" href="/team/" data-r data-d="1">
+          <span class="driver-num">01</span>
+          <span class="driver-discipline">Sim Racing</span>
+          <div class="driver-info">
+            <span class="driver-tag">Primary Driver</span>
+            <span class="driver-name">To Be Announced</span>
+          </div>
+        </a>
+        <a class="driver-card" href="/team/" data-r data-d="2">
+          <span class="driver-num">02</span>
+          <span class="driver-discipline">Sim Racing</span>
+          <div class="driver-info">
+            <span class="driver-tag">Secondary Driver</span>
+            <span class="driver-name">To Be Announced</span>
+          </div>
+        </a>
+        <a class="driver-card" href="/team/" data-r data-d="3">
+          <span class="driver-num">03</span>
+          <span class="driver-discipline">Development</span>
+          <div class="driver-info">
+            <span class="driver-tag">Development Driver</span>
+            <span class="driver-name">To Be Announced</span>
+          </div>
+        </a>
+      </div>
+      <div class="ops-row" data-r>
+        <div class="ops-item">
+          <span class="ops-role">Team Principal</span>
+          <span class="ops-name">To Be Announced</span>
+        </div>
+        <div class="ops-item">
+          <span class="ops-role">Data &amp; Engineering</span>
+          <span class="ops-name">To Be Announced</span>
+        </div>
+        <div class="ops-item">
+          <span class="ops-role">Strategy</span>
+          <span class="ops-name">To Be Announced</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Racing image band -->
+  <div class="image-band" id="racingBand">
+    <img src="/assets/img/hero-racing.jpg" alt="Sector3 Racing on track" loading="lazy" />
+    <div class="image-band-overlay"></div>
+    <span class="image-band-label">Racing Programs</span>
+    <span class="image-band-sub">Competition · Results</span>
+  </div>
+
+  <!-- Programs -->
   <section class="section alt">
     <div class="container">
-      <h2>Racing Programs</h2>
-
-      <div class="grid three">
-        <div class="card">
+      <div class="section-head" data-r>
+        <span class="eyebrow-section">Competition</span>
+        <h2>How we race.</h2>
+        <p class="lede">Structured programs with defined objectives. Every session generates data. Every data point informs the next move.</p>
+      </div>
+      <div class="program-strip" data-r>
+        <div class="program-tile">
+          <span class="prog-num">01</span>
           <h3>Sim Racing</h3>
-          <p>Endurance and sprint competition with an emphasis on consistency and racecraft.</p>
+          <p>Endurance and sprint disciplines. Emphasis on consistency, racecraft, and setup precision.</p>
         </div>
-
-        <div class="card">
+        <div class="program-tile">
+          <span class="prog-num">02</span>
           <h3>Customer Motorsport</h3>
-          <p>Planned participation in accessible entry-level categories with disciplined progression.</p>
+          <p>Planned participation in real-world entry-level categories with a clear progression model.</p>
         </div>
-
-        <div class="card">
+        <div class="program-tile">
+          <span class="prog-num">03</span>
           <h3>Development</h3>
-          <p>Driver and systems development through structured testing and iteration.</p>
+          <p>Continuous driver and systems development through structured testing and iteration cycles.</p>
         </div>
       </div>
     </div>
@@ -105,6 +193,99 @@
 </main>
 
 <div id="siteFooterMount"></div>
-  
+
+<script>
+  // Scroll reveal
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('in');
+      if (en.target.classList.contains('image-band')) en.target.classList.add('in-view');
+    });
+  }, { threshold: .08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('[data-r]').forEach(el => revealObs.observe(el));
+
+  // Also trigger image band scale on scroll
+  const bandObs = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('in-view'); });
+  }, { threshold: .1 });
+  document.querySelectorAll('.image-band').forEach(el => bandObs.observe(el));
+
+  // Car carousel
+  const carData = [
+    {
+      name: 'Current Specification', sub: 'Sim Racing · 2026',
+      specs: [
+        { label: 'Series', value: 'Sim Racing' },
+        { label: 'Class',  value: 'TBA' },
+        { label: 'Season', value: '2026' },
+        { label: 'Status', value: 'Active' }
+      ]
+    },
+    {
+      name: 'Next Programme', sub: 'Customer Motorsport · TBA',
+      specs: [
+        { label: 'Series', value: 'Customer Motorsport' },
+        { label: 'Class',  value: 'TBA' },
+        { label: 'Season', value: 'TBA' },
+        { label: 'Status', value: 'Planned' }
+      ]
+    }
+  ];
+
+  const slides    = document.querySelectorAll('.car-slide');
+  const dots      = document.querySelectorAll('.car-dot');
+  const specs     = document.getElementById('carSpecs');
+  const nameEl    = document.getElementById('carName');
+  const subEl     = document.getElementById('carSub');
+  const counterEl = document.getElementById('carCounter');
+  const labelWrap = document.getElementById('carLabel');
+  let cur = 0, busy = false;
+
+  function updateLabel() {
+    labelWrap.style.opacity = '0';
+    setTimeout(() => {
+      nameEl.textContent    = carData[cur].name;
+      subEl.textContent     = carData[cur].sub;
+      counterEl.textContent = (cur + 1).toString().padStart(2, '0') + ' / ' + slides.length.toString().padStart(2, '0');
+      labelWrap.style.opacity = '1';
+    }, 200);
+  }
+
+  function goTo(n, dir) {
+    if (n === cur || busy) return;
+    busy = true;
+    const direction = dir ?? (n > cur ? 'right' : 'left');
+    const outEl = slides[cur];
+    const inEl  = slides[n];
+
+    inEl.style.transition = 'none';
+    inEl.dataset.state    = direction === 'right' ? 'right' : 'left';
+    void inEl.offsetWidth;
+    inEl.style.transition = '';
+
+    inEl.dataset.state  = 'active';
+    outEl.dataset.state = direction === 'right' ? 'left' : 'right';
+
+    dots[cur].classList.remove('active');
+    dots[n].classList.add('active');
+    cur = n;
+
+    specs.style.opacity = '0';
+    updateLabel();
+    setTimeout(() => {
+      specs.innerHTML = carData[cur].specs.map(s =>
+        `<div class="car-spec"><span class="car-spec-label">${s.label}</span><span class="car-spec-value">${s.value}</span></div>`
+      ).join('');
+      specs.style.opacity = '1';
+      busy = false;
+    }, 300);
+  }
+
+  document.getElementById('carPrev').addEventListener('click', () => goTo(cur > 0 ? cur - 1 : slides.length - 1, 'left'));
+  document.getElementById('carNext').addEventListener('click', () => goTo(cur < slides.length - 1 ? cur + 1 : 0, 'right'));
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.i)));
+</script>
+
 </body>
 </html>
